@@ -1,3 +1,5 @@
+// Copyright 2025 João Vitor Frabis Zago
+
 #ifndef VERIFICA_VELHA.HPP
 #define VERIFICA_VELHA.HPP
 

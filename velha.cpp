@@ -1,3 +1,5 @@
+// Copyright 2025 João Vitor Frabis Zago
+
 /**
  * \file  velha.cpp
  */

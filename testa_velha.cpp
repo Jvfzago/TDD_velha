@@ -1,3 +1,4 @@
+// Copyright 2025 João Vitor Frabis Zago
 
 /**
  * \file testa_velha.cpp
