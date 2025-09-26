@@ -1,8 +1,8 @@
 // Copyright 2025 João Vitor Frabis Zago
 
-#ifndef VERIFICA_VELHA.HPP
-#define VERIFICA_VELHA.HPP
+#ifndef VELHA_HPP_
+#define VELHA_HPP_
 
 int VerificaVelha(int velha[3][3]);
 
-#endif  //VERIFICA_VELHA.HPP
+#endif  // VELHA_HPP_
