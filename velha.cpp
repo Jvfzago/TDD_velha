@@ -6,6 +6,7 @@
 
 
 #include "velha.hpp"
+#include <iostream>
 
 /**
  * @brief verifica situacao do jogo da velha
@@ -67,11 +68,13 @@ int VerificarDiagonais(int velha[3][3], int jogador) {
 int VerificaEmpate(int velha[3][3]) {
   for (int linha = 0; linha < 3; linha++) {
     for (int coluna = 0; coluna < 3; coluna++) {
-      if (velha[linha][coluna] == 1 || velha[linha][coluna] == 2) return 1;
+      if (velha[linha][coluna] == 0) return 0;
     }
   }
-  return 0;
+  return 1;
 }
+
+
 
 int VerificaVelha(int velha[3][3]) {
   int jogadorX = 1;
@@ -101,8 +104,14 @@ int VerificaVelha(int velha[3][3]) {
   //  Verifica se O ganha na diagonal
   if (VerificarDiagonais(velha, jogadorO)) return vencedorO;
 
-  // Verifica empate (deve estar depois dos códigos que verificam vitoria)
+  //  Verifica empate (deve estar depois dos códigos que verificam vitoria)
   if (VerificaEmpate(velha)) return empatado;
+
+  //  Retorna indefinido
+  //  Já verificou-se se o jogo não é impossível, se alguém ganhou e
+  //  se deu empate, logo, necessariamente o jogo
+  //  tem que estar ainda indefinido
+  return indefinido;
 
   return -3;  // Nao caiu em nenhum caso (-3)
 }
