@@ -17,11 +17,25 @@
 
 int VerificaVelha(int velha[3][3]) {
   int num = 0;
-  for (int i = 0; i < 3; i++) {
-    if (velha[i][2] == 1) num++;
+
+  for (int coluna = 0; coluna < 3; coluna++) {  // Verifica vitoria de X coluna
+    for (int linha = 0; linha < 3; linha++) {
+      if (velha[linha][coluna] == 1) num++;
+    }
+    if (num == 3) {
+      return 1;
+    }
+    num = 0;
   }
-  if (num == 3) {
-    return 1;
-  }
+
+  for (int linha = 0; linha < 3; linha++) {  // Verifica vitoria de X linha
+      for (int coluna = 0; coluna < 3; coluna++) {
+        if (velha[linha][coluna] == 1) num++;
+      }
+      if (num == 3) {
+        return 1;
+      }
+      num = 0;
+    }
   return 0; /*!< retorna zero para teste */
 }
