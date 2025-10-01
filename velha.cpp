@@ -134,9 +134,9 @@ int VerificaVelha(int velha[3][3]) {
   VerificarDiagonais(velha, jogadorO);
 
   // 1. Múltiplos Vencedores: Se X e O ganharam simultaneamente
-  // if (vitoriasDeX > 0 && vitoriasDeO > 0) {
-  //   return -2;
-  // }
+  if (vitoriasDeX > 0 && vitoriasDeO > 0) {
+    return -2;
+  }
 
   // 2. Se X ou O possuem mais de uma vitória
   if (vitoriasDeX > 1 || vitoriasDeO > 1) return impossivel;
