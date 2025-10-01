@@ -99,4 +99,12 @@ TEST_CASE("Testa velha", "[single-file]") {
                         };
     REQUIRE(VerificaVelha(teste11) == -2);
   }
+
+  SECTION("Jogo Impossível - Verifica se X vence mais de uma vez - Retorna -2") {
+    int teste12[3][3] = { { 2, 2, 1 },
+                          { 2, 2, 1 },
+                          { 1, 1, 1 }
+                        };
+    REQUIRE(VerificaVelha(teste12) == -2);
+  }
 }
