@@ -27,4 +27,12 @@ TEST_CASE("Testa velha", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste2) == 1);
   }
+
+  SECTION("Verifica vitoria de O(coluna)") {
+    int teste3[3][3] = {  { 1, 1, 2 },
+                          { 1, 0, 2 },
+                          { 0, 0, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste3) == 2);
+  }
 }
