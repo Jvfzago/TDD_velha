@@ -31,7 +31,7 @@ debug: testa_velha.cpp   velha.cpp velha.hpp
 	
 	
 cppcheck: testa_velha.cpp   velha.cpp velha.hpp
-	cppcheck  --enable=warning --suppress=*:catch.hpp testa_velha.cpp velha.cpp
+	cppcheck  --enable=warning --suppress=*:catch.hpp --suppress=toomanyconfigs testa_velha.cpp velha.cpp
 
 valgrind: testa_velha
 	valgrind --leak-check=yes --log-file=valgrind.rpt ./testa_velha
@@ -40,4 +40,7 @@ valgrind: testa_velha
 clean:
 	rm -rf *.o *.exe *.gc* testa_velha 
 	
+
+check_quality: cpplint cppcheck valgrind
+	@echo "==== Verificação concluída ===="
 	
