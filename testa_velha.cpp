@@ -13,7 +13,7 @@
 
 TEST_CASE("Testa velha", "[single-file]") {
   SECTION("Verifica vitoria de X (coluna)") {
-    int teste1[3][3] = {  { 2, 0, 1 },
+    int teste1[3][3] = {  { 0, 0, 1 },
                           { 2, 0, 1 },
                           { 0, 2, 1 }
                       };
@@ -92,7 +92,7 @@ TEST_CASE("Testa velha", "[single-file]") {
     REQUIRE(VerificaVelha(teste10) == -1);
   }
 
-  SECTION("Jogo Impossível - Diferença de pessas invalida - Retorna -2") {
+  SECTION("Jogo Imp - Diferença de pessas invalida - Retorna -2") {
     int teste11[3][3] = { { 1, 0, 1 },
                           { 1, 0, 1 },
                           { 0, 2, 2 }
@@ -100,7 +100,7 @@ TEST_CASE("Testa velha", "[single-file]") {
     REQUIRE(VerificaVelha(teste11) == -2);
   }
 
-  SECTION("Jogo Impossível - Verifica se X vence mais de uma vez - Retorna -2") {
+  SECTION("Jogo Imp - Verifica se X vence mais de uma vez - Retorna -2") {
     int teste12[3][3] = { { 2, 2, 1 },
                           { 2, 2, 1 },
                           { 1, 1, 1 }
