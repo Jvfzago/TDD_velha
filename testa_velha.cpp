@@ -12,7 +12,7 @@
 
 
 TEST_CASE("Testa velha", "[single-file]") {
-  SECTION("Verifica vitoria de X(coluna)") {
+  SECTION("Verifica vitoria de X (coluna)") {
     int teste1[3][3] = {  { 2, 0, 1 },
                           { 2, 0, 1 },
                           { 0, 2, 1 }
@@ -20,7 +20,7 @@ TEST_CASE("Testa velha", "[single-file]") {
     REQUIRE(VerificaVelha(teste1) == 1);
   }
 
-  SECTION("Verifica vitoria de X(linha)") {
+  SECTION("Verifica vitoria de X (linha)") {
     int teste2[3][3] = {  { 1, 1, 1 },
                           { 2, 0, 2 },
                           { 0, 2, 0 }
@@ -28,10 +28,18 @@ TEST_CASE("Testa velha", "[single-file]") {
     REQUIRE(VerificaVelha(teste2) == 1);
   }
 
-  SECTION("Verifica vitoria de O(coluna)") {
+  SECTION("Verifica vitoria de O (coluna)") {
     int teste3[3][3] = {  { 1, 1, 2 },
                           { 1, 0, 2 },
                           { 0, 0, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste3) == 2);
+  }
+
+  SECTION("Verifica vitoria de O (linha)") {
+    int teste3[3][3] = {  { 2, 2, 2 },
+                          { 1, 0, 1 },
+                          { 0, 0, 1 }
                       };
     REQUIRE(VerificaVelha(teste3) == 2);
   }
