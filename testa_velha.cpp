@@ -115,4 +115,12 @@ TEST_CASE("Testa velha", "[single-file]") {
                         };
     REQUIRE(VerificaVelha(teste13) == -2);
   }
+
+  SECTION("Jogo Imp - Multiplos vencedores - Retorna -2") {
+    int teste13[3][3] = { { 1, 1, 2 },
+                          { 1, 0, 2 },
+                          { 1, 0, 2 }
+                        };
+    REQUIRE(VerificaVelha(teste13) == -2);
+  }
 }
