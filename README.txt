@@ -7,6 +7,7 @@ Utilize o seguinte comando para rodar o código:
 make all
 
 Ou então use essas duas linhas de comando:
+g++ -std=c++11 -Wall -c velha.cpp
 g++ -std=c++11 -Wall velha.o testa_velha.cpp -o testa_velha
 ./testa_velha
 
