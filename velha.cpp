@@ -101,7 +101,7 @@ int VerificaVelha(int velha[3][3]) {
   //  Verifica se O ganha na diagonal
   if (VerificarDiagonais(velha, jogadorO)) return vencedorO;
 
-  // Verifica empate
+  // Verifica empate (deve estar depois dos códigos que verificam vitoria)
   if (VerificaEmpate(velha)) return empatado;
 
   return -3;  // Nao caiu em nenhum caso (-3)

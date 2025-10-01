@@ -83,4 +83,12 @@ TEST_CASE("Testa velha", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste9) == 0);
   }
+
+  SECTION("Jogo Indefinido - Retorna -1") {
+    int teste10[3][3] = {  { 1, 0, 0 },
+                          { 0, 2, 0 },
+                          { 0, 0, 0 }
+                      };
+    REQUIRE(VerificaVelha(teste10) == -1);
+  }
 }
