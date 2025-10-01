@@ -93,5 +93,5 @@ int VerificaVelha(int velha[3][3]) {
   if (VerificarDiagonais(velha, jogadorO)) return vencedorO;
 
 
-  return 0; /*!< retorna zero para teste */
+  return -3; // Nao caiu em nenhum caso (-3)
 }
