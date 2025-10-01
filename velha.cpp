@@ -89,7 +89,8 @@ int VerificaVelha(int velha[3][3]) {
   //  Verifica se X ganha na diagonal
   if (VerificarDiagonais(velha, jogadorX)) return vencedorX;
 
-
+  //  Verifica se O ganha na diagonal
+  if (VerificarDiagonais(velha, jogadorO)) return vencedorO;
 
 
   return 0; /*!< retorna zero para teste */
