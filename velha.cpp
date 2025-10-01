@@ -145,7 +145,7 @@ int VerificaVelha(int velha[3][3]) {
   //
   if (VerificaImpDiferenca(velha, jogadorO, jogadorX)) return impossivel;
 
-  // Vitória Inconsistente com a Contagem de Peças (X sempre começa)
+  // Vitória Inconsistente com a Contagem de Peças
   // if (vitoriasDeX > 0 && numX < numO) {
   //   return impossivel;
   // }

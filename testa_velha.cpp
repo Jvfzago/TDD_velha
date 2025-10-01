@@ -123,4 +123,12 @@ TEST_CASE("Testa velha", "[single-file]") {
                         };
     REQUIRE(VerificaVelha(teste14) == -2);
   }
+
+  SECTION("Jogo Imp - Vitoria inconistente com qtn pecas - Retorna -2") {
+    int teste15[3][3] = { { 1, 0, 2 },
+                          { 1, 1, 2 },
+                          { 0, 1, 2 }
+                        };
+    REQUIRE(VerificaVelha(teste15) == -2);
+  }
 }
