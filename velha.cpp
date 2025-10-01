@@ -139,7 +139,7 @@ int VerificaVelha(int velha[3][3]) {
   // }
 
   // 2. Se X ou O possuem mais de uma vitória
-  if (vitoriasDeX > 1) return impossivel;
+  if (vitoriasDeX > 1 || vitoriasDeO > 1) return impossivel;
 
 
   //
