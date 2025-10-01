@@ -56,6 +56,11 @@ int VerificarDiagonais(int velha[3][3], int jogador) {
   if (num == 3) return 1;
   num = 0;
 
+  // if (velha[0][2] == jogador) num++;
+  // if (velha[1][1] == jogador) num++;
+  // if (velha[2][0] == jogador) num++;
+  // if (num == 3) return 1;
+
   return 0;
 }
 
@@ -81,8 +86,10 @@ int VerificaVelha(int velha[3][3]) {
   //  Verifica se O ganha na coluna
   if (VerificaColuna(velha, jogadorO)) return vencedorO;
 
-  //  Verifica se X ganha na diagonal principal
+  //  Verifica se X ganha na diagonal
   if (VerificarDiagonais(velha, jogadorX)) return vencedorX;
+
+  
 
 
 

@@ -53,11 +53,12 @@ TEST_CASE("Testa velha", "[single-file]") {
   }
 
 
-  // SECTION("Verifica vitoria de X (diagonal secundaria)") {
-  //   int teste6[3][3] = {  { 0, 2, 1 },
-  //                         { 2, 1, 0 },
-  //                         { 1, 0, 2 }
-  //                     };
-    // REQUIRE(VerificaVelha(teste6) == 1);
-  // }
+  SECTION("Verifica vitoria de X (diagonal secundaria)") {
+    int teste6[3][3] = {  { 0, 2, 1 },
+                          { 2, 1, 0 },
+                          { 1, 0, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste6) == 1);
+  }
+  
 }
