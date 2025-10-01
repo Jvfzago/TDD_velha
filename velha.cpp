@@ -7,6 +7,7 @@
 
 #include "velha.hpp"
 #include <iostream>
+#include <cmath>
 
 /**
  * @brief verifica situacao do jogo da velha
@@ -74,7 +75,20 @@ int VerificaEmpate(int velha[3][3]) {
   return 1;
 }
 
-// int VerificaDiferenca(int velha[3][3], int jogaodor1, int joga)
+int VerificaImpDiferenca(int velha[3][3], int jogador1, int jogador2) {
+  int num1 = 0;
+  int num2 = 0;
+
+  for (int linha = 0; linha < 3; linha++) {
+    for (int coluna = 0; coluna < 3; coluna++) {
+      if (velha[linha][coluna] == jogador1) num1++;
+      if (velha[linha][coluna] == jogador2) num2++;
+    }
+  }
+
+  if (abs(num1 - num2) > 1) return 1;
+  return 0;
+}
 
 
 int VerificaVelha(int velha[3][3]) {
@@ -86,6 +100,9 @@ int VerificaVelha(int velha[3][3]) {
   int empatado = 0;
   int indefinido = -1;
   int impossivel = -2;
+
+  //  Verifica se X e O diferem em mais de 1
+  if (VerificaImpDiferenca(velha, jogadorO, jogadorX)) return impossivel;
 
   //  Verifica se X ganha na linha
   if (VerificaLinha(velha, jogadorX)) return vencedorX;
