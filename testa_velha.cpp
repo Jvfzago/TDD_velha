@@ -91,4 +91,13 @@ TEST_CASE("Testa velha", "[single-file]") {
                         };
     REQUIRE(VerificaVelha(teste10) == -1);
   }
+
+  SECTION("Jogo Impossível - Verifica se X e O não diferem por mais de 1 - Retorna -2") {
+    int teste11[3][3] = { { 1, 0, 1 },
+                          { 1, 0, 1 },
+                          { 0, 2, 2 }
+                        };
+    REQUIRE(VerificaVelha(teste11) == -2);
+  }
+
 }

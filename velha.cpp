@@ -74,6 +74,7 @@ int VerificaEmpate(int velha[3][3]) {
   return 1;
 }
 
+// int VerificaDiferenca(int velha[3][3], int jogaodor1, int joga)
 
 
 int VerificaVelha(int velha[3][3]) {
