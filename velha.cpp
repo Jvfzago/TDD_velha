@@ -36,6 +36,17 @@ int VerificaVelha(int velha[3][3]) {
         return 1;
       }
       num = 0;
+  }
+
+  for (int coluna = 0; coluna < 3; coluna++) {  // Verifica vitoria de O coluna
+    for (int linha = 0; linha < 3; linha++) {
+      if (velha[linha][coluna] == 2) num++;
     }
+    if (num == 3) {
+      return 2;
+    }
+    num = 0;
+  }
+
   return 0; /*!< retorna zero para teste */
 }
