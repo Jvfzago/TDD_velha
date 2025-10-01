@@ -59,4 +59,12 @@ TEST_CASE("Testa velha", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste6) == 1);
   }
+
+  SECTION("Verifica vitoria de O (diagonal principal)") {
+    int teste7[3][3] = {  { 2, 1, 0 },
+                          { 1, 2, 0 },
+                          { 0, 0, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste7) == 2);
+  }
 }
