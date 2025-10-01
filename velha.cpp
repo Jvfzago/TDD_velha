@@ -64,6 +64,15 @@ int VerificarDiagonais(int velha[3][3], int jogador) {
   return 0;
 }
 
+int VerificaEmpate(int velha[3][3]) {
+  for (int linha = 0; linha < 3; linha++) {
+    for (int coluna = 0; coluna < 3; coluna++) {
+      if (velha[linha][coluna] == 1 || velha[linha][coluna] == 2) return 1;
+    }
+  }
+  return 0;
+}
+
 int VerificaVelha(int velha[3][3]) {
   int jogadorX = 1;
   int vencedorX = 1;
@@ -92,6 +101,8 @@ int VerificaVelha(int velha[3][3]) {
   //  Verifica se O ganha na diagonal
   if (VerificarDiagonais(velha, jogadorO)) return vencedorO;
 
+  // Verifica empate
+  if (VerificaEmpate(velha)) return empatado;
 
-  return -3; // Nao caiu em nenhum caso (-3)
+  return -3;  // Nao caiu em nenhum caso (-3)
 }
